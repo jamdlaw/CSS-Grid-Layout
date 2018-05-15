@@ -1,0 +1,41 @@
+/* styles.css */
+
+/* set our grid layout */
+.container{
+	display: grid;
+
+	grid-template-areas: 
+		"header header header"
+		"sidenav content aside"
+		"footer footer footer";
+
+	grid-template-columns:200px 1fr 200px;
+	grid-template-rows:auto 1fr auto;
+	grid-gap: 10px;
+	height:100vh;
+}
+
+/* now define what tags are linked to our grid layout */
+
+header{
+	grid-area: header;
+}
+
+sidenav{
+	grid-area: sidenav;
+	border:1px solid black; 
+}
+
+content{
+	grid-area:content;
+}
+
+aside{
+	grid-area:aside;
+	margin-right: 0.5rem;
+}
+
+footer{
+	grid-area:footer;
+	background-color:#D3D3D3;
+}
