@@ -3,23 +3,38 @@
 	<head>
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel = "stylesheet" type = "text/css" href = "css/styles.css" />
 		<!--NOTES: layout was taken from this tutorial. https://alligator.io/css/css-grid-holy-grail-layout/ 
 			I used this to understand more about the CSS grid system. also used https://css-tricks.com/snippets/css/complete-guide-grid/
 			Vuejs was taken from https://vuejs.org/v2/guide/components.html. all of the above meterial was lerned not just copied and pasted.
 		-->	
 	</head>
 	<body>
-		<div id="side-nav">
-			<ul id='blog-post-demo'>
-				<blog-post
-					v-for="post in posts"
-					v-bind:key="post.id"
-					v-bind:title="post.title"
-					v-bind:description="post.description"
-				>
-				</blog-post>
-		    </ul>
-	    </div>
-		<script type="text/javascript" src="js/blog_component.js"></script>	
+		<div class="container">
+			<header>
+				this is the header section
+			</header>
+			<sidenav id="side-nav">
+				<ul id='blog-post-demo'>
+					<blog-post
+						v-for="post in posts"
+						v-bind:key="post.id"
+						v-bind:title="post.title"
+						v-bind:description="post.description"
+					>
+					</blog-post>
+			    </ul>
+		    </sidenav>
+		    <content>
+		    	this is the main content area	
+		    </content>
+		    <aside>
+
+		    </aside>
+		   <footer>
+		   		this is the footer section
+		   </footer>	
+		</div>
+		<script type="text/javascript" src="js/vue_blog.js"></script>	
 	</body>
 </html>
