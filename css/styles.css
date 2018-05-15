@@ -15,6 +15,29 @@
 	height:100vh;
 }
 
+/* add some responsive styles */
+@media (max-width: 796px){
+	.container{
+		grid-template-areas:
+		   "header"
+		   "sidenav"
+		   "content"
+		   "aside"
+		   "footer";
+		grid-template-columns:1fr;   
+		grid-template-rows:
+			auto /* header */
+			minmax(75px,auto) /* nav */
+			1fr /* content */
+			minmax(75px,auto) /*aside */
+			auto; /* footer */
+
+		sidenav, aside {
+			margin:0;
+		}			
+	}
+}
+
 /* now define what tags are linked to our grid layout */
 
 header{
