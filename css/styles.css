@@ -1,5 +1,9 @@
 /* styles.css */
 
+body{
+	font-family: 'Raleway', 'Roboto', sans-serif;
+}
+
 /* set our grid layout */
 .container{
 	display: grid;
