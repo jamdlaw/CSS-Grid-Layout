@@ -20,7 +20,7 @@ body{
 }
 
 /* add some responsive styles */
-@media (max-width: 796px){
+@media  (max-width: 796px){
 	.container{
 		grid-template-areas:
 		   "header"
@@ -31,16 +31,25 @@ body{
 		grid-template-columns:1fr;   
 		grid-template-rows:
 			auto /* header */
-			minmax(75px,auto) /* nav */
+			minmax(0px,auto)  /* sidenav */
 			1fr /* content */
-			minmax(75px,auto) /*aside */
+			minmax(0px,auto) /*aside */
 			auto; /* footer */
-
 		sidenav, aside {
 			margin:0;
-		}			
+		}	
 	}
+	sidenav  {
+			display:none;
+		}	
+
+	.header-image{
+		display:none;
+	}
+
 }
+
+
 
 /* now define what tags are linked to our grid layout */
 
@@ -59,6 +68,10 @@ header{
 sidenav{
 	grid-area: sidenav;
 	border:1px solid black; 
+}
+
+sidenav ul {
+	list-style: none;
 }
 
 content{
