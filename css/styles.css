@@ -4,6 +4,11 @@ body{
 	font-family: 'Raleway', 'Roboto', sans-serif;
 }
 
+
+sidenav ul li.icon-item a.icon {
+    display: none;
+  	}	
+
 /* set our grid layout */
 .container{
 	display: grid;
@@ -39,16 +44,35 @@ body{
 			margin:0;
 		}	
 	}
-	sidenav  {
+	sidenav ul li.menu_item {
 			display:none;
-		}	
+		}
+
+	sidenav ul li.icon-item a.icon {
+    float: right;
+    display: block;
+    font-size:32px;
+  	}	
 
 	.header-image{
 		display:none;
 	}
+ 
+  sidenav ul#blog-post-demo.responsive {position: relative;}
+  sidenav ul li.menu_item.responsive {position: relative;}
+  sidenav ul li.icon-item.responsive {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  sidenav ul li.menu_item.responsive {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 
 }
-
 
 
 /* now define what tags are linked to our grid layout */
