@@ -5,6 +5,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<link rel = "stylesheet" type = "text/css" href = "css/styles.css" />
 		<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 		<!--NOTES: layout was taken from this tutorial. https://alligator.io/css/css-grid-holy-grail-layout/ 
 			I used this to understand more about the CSS grid system. also used https://css-tricks.com/snippets/css/complete-guide-grid/
 			Vuejs was taken from https://vuejs.org/v2/guide/components.html. all of the above meterial was lerned not just copied and pasted.
@@ -29,18 +31,38 @@
 						v-bind:description="post.description"
 					>
 					</blog-post>
+					<li class="icon-item"> 
+						<a class="icon">
+    						<i class="fa fa-bars"></i>
+ 						 </a> 
+ 					<li>
 			    </ul>
 		    </sidenav>
-		    <content>
-		    	content area
+		    <content >
+		    	this is the content area
 		    </content>
 		    <aside>
-
+		    	this is the aside (great place for ads)	
 		    </aside>
 		   <footer>
 		   		this is the footer section
 		   </footer>	
 		</div>
 		<script type="text/javascript" src="js/vue_blog.js"></script>	
+		<script>
+			const navList = document.querySelectorAll('.menu_item');
+			const icon = document.querySelector(".icon-item");
+			const list = document.querySelector("#blog-post-demo");
+			function myFunction(e) {
+				e.preventDefault();
+			    navList.forEach(navItem => navItem.classList.toggle('responsive')); 
+			    list.classList.toggle('responsive');
+			    icon.classList.toggle('responsive');
+            }
+
+			
+			icon.addEventListener('click', myFunction);
+		</script>
+
 	</body>
 </html>
