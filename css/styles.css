@@ -26,6 +26,7 @@ sidenav ul li.icon-item a.icon {
 
 /* add some responsive styles */
 @media  (max-width: 796px){
+
 	.container{
 		grid-template-areas:
 		   "header"
@@ -44,6 +45,11 @@ sidenav ul li.icon-item a.icon {
 			margin:0;
 		}	
 	}
+
+	header{
+		justify-content: center !important;
+	}
+
 	sidenav ul li.menu_item {
 			display:none;
 		}
@@ -80,7 +86,7 @@ sidenav ul li.icon-item a.icon {
 header{
 	grid-area: header;
   	display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     align-items: center;
     background-color:#D3D3D3;
 }
