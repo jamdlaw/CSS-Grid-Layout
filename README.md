@@ -1,2 +1,2 @@
-# CSS grid and responsive tranfiguration
+# CSS grid and responsive menu without tranfiguration
 This started out as a blog for Vue js and ended up being an learning experience in CSS grid. Also I worked on upgrading my skills with responsive design. Using CSS Grid we are able to create layouts where the navigation is running down the left hand side of the screen for desktops. Then on mobile, the same menu is moved to the upper right of the screen. This means we do not have to maintain two different menus, one that shows on desktop and another showing on mobile. This functionality is achieved by setting the layout at different screens using <strong> grid-template-areas </strong>
