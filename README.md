@@ -1,2 +1,2 @@
-# vue_blog
-A blog system using VUEjs
+# CSS grid and responsive tranfiguration
+This started out as a blog for Vue js and ended up being an learning experience in CSS grid. Also I worked on upgrading my skills with responsive design. For example I wanted to have some side nav down the left side of the screen, and then when we got into mobile I wanted the classic hamburger menu on the right side of the screen. I DON'T WANT TO TALK ABOUT how long it took me to figure out that instead of makeing the same navigation change places from left to the right, and instead have two menus and show only one of them at certain screen sizes..... anywho another learning experince in the magic of front-end trickery. 
