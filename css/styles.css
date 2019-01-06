@@ -4,7 +4,6 @@ body{
 	font-family: 'Raleway', 'Roboto', sans-serif;
 }
 
-
 sidenav ul li.icon-item a.icon {
     display: none;
   	}	
@@ -12,12 +11,10 @@ sidenav ul li.icon-item a.icon {
 /* set our grid layout */
 .container{
 	display: grid;
-
 	grid-template-areas: 
 		"header header header"
 		"sidenav content aside"
 		"footer footer footer";
-
 	grid-template-columns:200px 1fr 200px;
 	grid-template-rows:auto 1fr auto;
 	grid-gap: 10px;
@@ -26,63 +23,70 @@ sidenav ul li.icon-item a.icon {
 
 /* add some responsive styles */
 @media  (max-width: 796px){
-
-	.container{
-		grid-template-areas:
-		   "header"
-		   "sidenav"
-		   "content"
-		   "aside"
-		   "footer";
-		grid-template-columns:1fr;   
-		grid-template-rows:
-			auto /* header */
-			minmax(0px,auto)  /* sidenav */
-			1fr /* content */
-			minmax(0px,auto) /*aside */
-			auto; /* footer */
-		sidenav, aside {
-			margin:0;
-		}	
-	}
-
-	header{
-		justify-content: center !important;
-	}
-
-	sidenav ul li.menu_item {
-			display:none;
+		.container{
+			grid-template-areas:
+			   "header"
+			   "sidenav"
+			   "content"
+			   "aside"
+			   "footer";
+			grid-template-columns:1fr;   
+			grid-template-rows:
+				auto /* header */
+				minmax(0px,auto)  /* sidenav */
+				1fr /* content */
+				minmax(0px,auto) /*aside */
+				auto; /* footer */
+			sidenav, aside {
+				margin:0;
+			}	
 		}
 
-	sidenav ul li.icon-item a.icon {
-    float: right;
-    display: block;
-    font-size:32px;
-  	}	
+		header{
+			justify-content: center !important;
+		}
 
-	.header-image{
-		display:none;
-	}
- 
-  sidenav ul#blog-post-demo.responsive {position: relative;}
-  sidenav ul li.menu_item.responsive {position: relative;}
-  sidenav ul li.icon-item.responsive {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
+		sidenav ul li.menu_item {
+				display:none;
+			}
 
-  sidenav ul li.menu_item.responsive {
-    float: none;
-    display: block;
-    text-align: left;
-  }
+		sidenav ul li.icon-item a.icon {
+	    float: right;
+	    display: block;
+	    font-size:32px;
+	  	}	
 
-}
+		.header-image{
+			display:none;
+		}
+	 
+	  sidenav ul#blog-post-demo.responsive {position: relative;}
+	  sidenav ul li.menu_item.responsive {position: relative;}
+	  sidenav ul li.icon-item.responsive {
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	  }
+
+	  sidenav ul li.menu_item.responsive {
+	    float: none;
+	    display: block;
+	    text-align: left;
+	  }
+
+	 sidenav ul#blog-post-demo.responsive li:not(.icon-item) {
+	    float: none;
+	    display: block;
+	  }
+
+	  ul#blog-post-demo li:not(.icon-item){
+	  	display: none;
+	  }
+
+} /* end of 796 width
 
 
 /* now define what tags are linked to our grid layout */
-
 header{
 	grid-area: header;
   	display: flex;
